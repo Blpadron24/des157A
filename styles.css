@@ -1,9 +1,52 @@
 body{
     background-color: #F9E49F;
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
+    /* start of background color changing */
+    animation: myanimation 10s infinite;
    
 }
+
+
+
+@keyframes myanimation {
+    0% {background-color: #F9E49F}
+
+    50%{background-color: #E3F2ED}
+   
+    100% {background-color: #F9E49F}
+}
+/* end of background changing */
+/* adding animation for trees under this */
+
+header div{
+    background-image: url(images/Trees.svg);
+    
+}
+
+header div:hover .tree{
+    animation: fadeIn 3s forwards;
+}
+
+.tree{
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    animation: fadeOut 3s forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+ 
+  @keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+/* adding animation for trees over this */
+
 header{
     margin-bottom: 25px;
     margin-top: 25px;
@@ -93,9 +136,96 @@ article ul li a{
 
  a:hover {
     
-    text-decoration: underline;
+    color: #0E8160;
 }
 
 footer{
     text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-size: 24px;
+    
+    
+}
+
+footer {
+    background-image: url(images/LeavesBottom.svg);
+   background-size: 200% auto ;
+   background-position: center;
+   padding-top: 10px;
+   padding-bottom: 20px;
+   
+}
+
+footer a{
+    color: #1F271B;
+text-decoration: none;
+}
+
+[class*="col-"] {
+    width: 100%;
+  }
+
+@media only screen and (min-width: 888px) {
+body{ max-width: 1200px;
+/* padding-top: 10px; */
+}
+
+header{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex: 1 2 1;
+    margin-bottom: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+header img{
+    min-width: 450px;
+    height: auto;
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    
+   
+    align-items: flex-start;
+}
+article{
+    min-width: 250px;
+ 
+    height: 400px;
+}
+
+footer{background-size: 100% auto;
+padding-bottom:122px ;
+
+}
+}
+@media only screen and (min-width: 1150px) {
+
+
+article{ min-width: 350px;
+height: 400px;}
+
+header img{
+    min-width: 600px;
+
+    
+}
+header h1{
+    font-size: 100px;
+    padding-top: 100px;
+}
+
+
+}
+@media only screen and (min-width: 1300px) {
+body {
+   
+    padding-left: 200px;
+}
+
+
 }
