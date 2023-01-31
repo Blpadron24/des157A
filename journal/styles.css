@@ -20,7 +20,7 @@ body{
 /* adding animation for trees under this */
 
 header div{
-    background-image: url(/images/Trees.svg);
+    background-image: url(images/Trees.svg);
     
 }
 
@@ -149,7 +149,7 @@ footer p{
 }
 
 footer {
-    background-image: url(/images/LeavesBottom.svg);
+    background-image: url(images/LeavesBottom.svg);
    background-size: 200% auto ;
    background-position: center;
    padding-top: 10px;
