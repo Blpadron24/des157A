@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <style>
+        .red { color: red; }
+        .blue{ color: blue;}
+        .green{ color: white;}
+        .yellow {color: yellow;}
+    
+        h1{font-family: 'Roboto', sans-serif;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="color"> This is my favorite color!</h1>
+
+
+    <script>
+        //this asks the user for their favorite primary color and changes the background color
+        var color =prompt("what's your favorite primary color?","");
+
+        var favColor = document.getElementsByClassName("color");
+        favColor[0].className = "green";
+
+        // var mainHeading = document.querySelector('h1');
+		// mainHeading.className = "red";
+        document.bgColor = color;
+
+
+    </script>
+</body>
+</html>
