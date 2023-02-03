@@ -103,6 +103,7 @@ background-color: #F5BE8E;
 article{
     border-radius: 25px;
     min-height: 430px;
+    margin-bottom: 50px;
 }
 
 article h2{
