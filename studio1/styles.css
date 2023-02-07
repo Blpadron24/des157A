@@ -1,0 +1,129 @@
+
+/* general styling */
+body{
+    background-color:#E3F2ED ;
+    height: 100%;
+    padding-top: 50px;
+
+}
+main{
+    line-height: 1.5em;
+    color: #1F271B;
+}
+
+img{
+    display: block;
+   
+}
+
+header h1{
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    font-size: 75px;
+    margin: 0;
+    padding: 0;
+    color: #1F271B;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 25px; 
+    line-height: 1.4em;
+}
+
+p{
+    font-family: 'Josefin Sans', sans-serif;
+}
+label{
+    font-family: 'Josefin Sans', sans-serif;
+}
+/* show after madlib */
+.pay {
+    display: none;
+/* show after pay */
+}
+.right{
+    display: none;
+}
+/* madlib styling */
+.madlib{
+    background-color: #F5BE8E;
+    border-radius: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.dialogue{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+form{
+    display: block;
+}
+.description{
+    font-size: 16px;
+    font-style: italic;
+    font-weight: lighter;
+}
+.question{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.lighter{
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 16px;
+}
+/* footer styling */
+footer p{
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+  
+}
+/* input boxes styling */
+input[type=text]{
+    background-color: #D8A87E;
+    color: #1F271B;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: italic;
+    padding: 10px 10px 3px 10px;
+    width: 200px;
+    box-sizing: border-box;
+    border: none;
+    margin-left: 10px;
+    
+}
+/* dropdown styling */
+select[name=scenario]{
+    color: #1F271B;
+    border: none;
+    width: 200px;
+    margin-left: 10px ;
+    background-color: #D8A87E;
+    height: 30px;
+    margin-top: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+input[type=submit]{
+    background-color: #D8A87E;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 100px;
+   border-color: #1F271B;
+   height: 30px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   
+
+}
