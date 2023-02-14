@@ -1,33 +1,58 @@
 
 /* general styling */
 body{
+    font-family: 'Josefin Sans', sans-serif;
+    color: #1F271B;
     background-color:#E3F2ED ;
     height: 100%;
-    padding-top: 50px;
+    margin: 0;
+   
+   
 
 }
 main{
     line-height: 1.5em;
     color: #1F271B;
+    
 }
 
 img{
-    display: block;
+  
+  display: block;
+  max-width: 300px;
+  margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+ 
    
+    border-radius: 30px;
+
+
+}
+header{
+    display: flex;
+justify-content: center;
+
+
+
 }
 
 header h1{
     font-family: 'Amatic SC', cursive;
     font-weight: bold;
     font-size: 75px;
-    margin: 0;
-    padding: 0;
-    color: #1F271B;
+    margin-bottom: 10px;
+   margin-top: 10px;
+    color: forestgreen;
     text-align: center;
+    
+   
 }
+
 
 h2{
     font-family: 'Josefin Sans', sans-serif;
+    color: #1F271B;
     font-weight: bolder;
     text-align: center;
     font-size: 30px;
@@ -41,16 +66,37 @@ p{
 label{
     font-family: 'Josefin Sans', sans-serif;
 }
-/* show after madlib */
-.pay {
-    display: none;
-/* show after pay */
+
+ul {
+    list-style: none;
+    font-family: 'Josefin Sans', sans-serif;
+    
 }
-.right{
+
+ul li::before {
+    content: "\2022"; 
+    color: darkred; 
+    font-weight: bold; 
+    display: inline-block;
+    width: 1em; 
+    margin-left: -1em; 
+  }
+.fineprint{
+    padding-top: 25px;
+    font-size: 14px;
+    font-weight: lighter;
+}
+  
+
+.hidden{
     display: none;
 }
-/* madlib styling */
-.madlib{
+.pay h3{
+    font-family: 'Josefin Sans', sans-serif;
+    color: #1F271B;
+}
+
+ .pay {
     background-color: #F5BE8E;
     border-radius: 30px;
     margin-left: 25px;
@@ -59,6 +105,65 @@ label{
     padding-right: 10px;
     padding-top: 20px;
     padding-bottom: 20px;
+    
+} 
+ .right{
+    background-color: #F5BE8E;
+    border-radius: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+} 
+
+
+.recipename{
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+   
+    color: darkred;
+}
+
+.recipe{
+    background-color: rgb(235, 207, 170);
+    padding-left: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+}
+
+
+.error{
+font-size: 13px;;
+color:crimson;
+margin: 0;
+}
+
+.addspace{
+    margin-top:10px;
+}
+.right h3{
+    font-family: 'Josefin Sans', sans-serif;
+    color: #1F271B;
+    font-size: 30px;
+    line-height: 1.4em;
+}
+/* madlib styling */
+.madlib{
+    
+  display: block;
+ 
+    background-color: #F5BE8E;
+    border-radius: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* display: none; */
 }
 .dialogue{
     font-weight: bold;
@@ -90,6 +195,8 @@ footer p{
     font-weight: bold;
   
 }
+
+
 /* input boxes styling */
 input[type=text]{
     background-color: #D8A87E;
@@ -114,16 +221,110 @@ select[name=scenario]{
     margin-top: 10px;
     font-family: 'Josefin Sans', sans-serif;
 }
-
+/* input button for from styling */
 input[type=submit]{
     background-color: #D8A87E;
     font-family: 'Josefin Sans', sans-serif;
-    width: 100px;
+    width: 110px;
    border-color: #1F271B;
    height: 30px;
    display: block;
    margin-left: auto;
    margin-right: auto;
+   padding-top: 4px;
    
+}
+.newpotion{
+    background-color: #D8A87E;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 125px;
+   border-color: #1F271B;
+   height: 30px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   padding-top: 4px;
+   margin-top: 25px;
+}
+
+
+
+
+@media only screen and (min-width: 888px) {
+body{ 
+    max-width: 100vw;
+    padding-top: 35px;
+   
+
+}
+
+
+header h1{
+    font-size:150px;
+}
+.horizontal{
+    display: flex;   
+    margin-left: 25px; 
+    margin-right: 25px;
+    align-items:flex-end;
+    
+    
+}
+img{
+    display: block;
+    max-width: 370px;
+    margin-bottom: auto;
+    /* margin-right: 10px; */
+}
+
+.left {
+flex: 1;
+padding-right: 10px;}
+
+main{
+    flex: 2;
+   
+}
+.pay{
+    max-width: 700px;
+    min-height: 750px;
+   margin-left: 0;
+   padding-left: 30px;
+   padding-right: 30px;
+
+   
+
+}
+.pay h3{
+    
+    padding-top: 50px;
+}
+
+.right h3{
+    
+    padding-top: 50px;
+}
+
+.right{
+    
+    max-width: 700px;
+    min-height: 750px;
+   margin-left: 0;
+   padding-left: 30px;
+   padding-right: 30px;
+}
+.madlib{
+    margin-left: 0;
+    max-width: 700px;
+    max-height: 750px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+}
+
+
+footer{
+    font-size:25px;
+}
 
 }

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
      <title>Brenda's Madlib</title>
@@ -14,91 +13,133 @@
      <script src="script.js" defer></script> 
 </head>
 <body>
+    <div class="horizontal">
+        <div class="left">
+            <header>
+                <h1>MADLIBS</h1>
+            </header>
+             <img src="images/awa.jpg" alt="illustrated trees" >
+        </div>
     <main>
-    <div class="left">
-    <header>
-        <h1>MADLIBS</h1>
-        
-
-    </header>
-    <img src="images/Trees.svg" alt="illustrated trees" >
-    </div>
-
-    <article class="right">
-        <h3> "----" potion</h3>
-        <ul>
-            <li>(###) handfull/s of (emotion) root </li>
-            <li>the juice of a/n (object) </li>
-            <li>(###2) drops of (color) slime  </li>
-            <li> a cup of (subject) beans</li>
-            <li> 3 (fruits) (bodypart)  </li>
-            <li>mix well for (time)</li>
-            <li>drink from a magical (container)</li>
-        </ul>
-        <p>*use at your own risk. results may vary. no returns. goodluck. </p>
-  
-    </article>    
-    <div class="pay">
-    <h3 class="dialogue"> "Perfect! I have just the thing for you!" </h3> 
-    <p class="dialogue">"Here you go the recipe to your very own "----" potion!</p>
-    <p class="dialogue">"That'll be ($$$), oh and dont forget to read the fine print! </p>
-    <button>swipe card </button>
-    </div>
-   
-
-    <div class="madlib">
-        <form>      
-            <h2>Welcome to the Autumn Wood Apothicary </h2>
-             <label for="scenario" class="question"> "Hello! What brings you in today?"<br> <span class="lighter">(pick one)</span></label> 
-             <select name="scenario" id="scenario" required>
-                 <option value=" ">---</option>
-                 <option value="strength">strength</option>
-                 <option value="happiness">happiness</option>
-                 <option value="wisdom">wisdom</option>
-                 <option value="wealth">wealth</option>
-                 <option value="luck">luck</option>
-             </select>
+          
             
-            <p class="dialogue"> "Aah, I see. Well, I think I might be able to help... But for this to work please fill out the fields below."</p>
-           
-        
-            <label for="num1">Enter a number from 1-100:</label>
-            <input type="text" id="num1" required>
-            <p></p>
-            <label for="emotion">Enter an emotion:</label>
-            <input type="text" id="emotion" required>
-            <p class="description">(anger, happiness, boredom)</p>
-            <label for="color">Enter the first color you see:</label>
-            <input type="text" id="color" required>
-            <p class="description"></p>
-            <label for="subject">Enter the name of a subject in school:</label>
-            <input type="text" id="subject" required>
-            <p class="description">(english, math, history)</p>
-            <label for="num2">Enter a number from 200-300:</label>
-            <input type="text" id="num2" required>
-            <p class="description"></p>
-            <label for="object">Enter the name of an object that fits in the palm of your hand:</label>
-            <input type="text" id="object" required>
-            <p class="description">(rock, eraser, coin)</p>
-            <label for="time">Enter an amount of time:</label>
-            <input type="text" id="time" required>
-            <p class="description">(an hour, a year, two decades)</p>
-            <label for="bodypart">Name a bodypart:</label>
-            <input type="text" id="bodypart" required>
-            <p class="description">(arm, leg, nose)</p>
-            <label for="money">Enter an amount of money:</label>
-            <input type="text" id="money" required>
-            <p class="description">(one dollar, fivehundred dollars, a trillion and one dollars)</p>
-            <label for="fruits">Enter a fruit:</label>
-            <input type="text" id="fruits" required>
-            <p class="description">(orange, apple, watermelon)</p>
-        
-        
-        
-        </form>
-        <input type="submit" value="continue">
-          </div>
-          <footer><p>Designed by Brenda Padron</p></footer>
-        </main>
+
+
+            <section id="one" class="showing">
+                <div class="madlib">
+                    
+                        <form id="myform">      
+                            <h2>Welcome to the Autumn Wood Apothicary </h2>
+                            <label for="scenario" class="question"> "Hello! What brings you in today?"<br> <span class="lighter">(pick one)</span></label> 
+                            <select name="scenario" id="scenario" >
+                                <option value="">---</option>
+                                <option value="Strength">Strength</option>
+                                <option value="Happiness">Happiness</option>
+                                <option value="Wisdom">Wisdom</option>
+                                <option value="Wealth">Wealth</option>
+                                <option value="Luck">Luck</option>
+                            </select> 
+                            <p class="error" id="error"></p>
+                            
+                            <p class="dialogue"> "Aah, I see. Well, I think I might be able to help... But for this to work please fill out the fields below."</p>
+                        
+                        
+                            <label for="num1">Enter a number from 1-100:</label>
+                            <input type="text" id="num1" >
+                            <p class="error" id="error2"></p>
+                            <p></p>
+                            <label for="emotion">Enter an emotion:</label>
+                            <input type="text" id="emotion" >
+                            <p class="error" id="error3"></p>
+                            <p class="description">(anger, happiness, boredom)</p>
+                            <label for="color">Enter the first color you see:</label>
+                            <input type="text" id="color" >
+                            <p class="error" id="error4"></p>
+                            <p class="description"></p>
+                            <label for="subject">Enter the name of a subject in school:</label>
+                            <input type="text" id="subject" >
+                            <p class="error" id="error5"></p>
+                            <p class="description">(english, math, history)</p>
+                            <label for="num2">Enter a number from 200-300:</label>
+                            <input type="text" id="num2" >
+                            <p class="error" id="error6"></p>
+                            <p class="description"></p>
+                            <!-- <label for="object">Enter the name of an object that fits in the palm of your hand:</label>
+                            <input type="text" id="object" >
+                            <p class="error" id="error7"></p>
+                            <p class="description">(rock, eraser, coin)</p> -->
+                            <label for="money">Enter an amount of money:</label>
+                            <input type="text" id="money" >
+                            <p class="error" id="error8"></p>
+                            <p class="description">(one dollar, fivehundred dollars, a trillion and one dollars)</p>
+                            
+                        
+                            <input id="gotopay" type="submit" value="continue">
+                        
+                        </form>
+                       
+                    </div>
+                </section>  
+                
+            <section id="two" class="hidden">
+                 <div class="pay">
+                    <h3 class="dialogue"> "Perfect! Just a few more to fill out and I'll have just what you need!" </h3> 
+                    
+                    <form id="myform2">  
+                        
+
+                            <label for="time">Enter an amount of time:</label>
+                            <input type="text" id="time" >
+                            <p class="error" id="errorpay"></p>
+                            <p class="description">(an hour, a year, two decades)</p>
+                            <label for="bodypart">Name a bodypart:</label>
+                            <input type="text" id="bodypart" >
+                            <p class="error" id="errorpay2"></p>
+                            <p class="description">(arm, leg, nose)</p>
+                            <label for="object">Enter the name of an object that fits in the palm of your hand:</label>
+                            <input type="text" id="object" >
+                            <p class="error" id="error7"></p>
+                            <p class="description">(rock, eraser, coin)</p>
+                            <label for="fruit">Enter a fruit (plural):</label>
+                            <input type="text" id="fruit" >
+                            <p class="error" id="errorpay3"></p>
+                            <p class="description">(oranges, apples, watermelons)</p>
+
+                            <p id="moneyPlease" class="dialogue">"Oh but before we proceed, that'll be ($$$). Small price to pay to make a wish come true, plus YOU set the price!"</p>
+
+                            <input id="gotoright" type="submit" value="Swipe Card">
+
+                        </form>
+            
+                   
+                    
+                </div>
+            </section>
+
+            <section id="three" class="hidden">
+                <article class="right">
+                    <h3 id="potionname" class="dialogue">"Here you go, the recipe to your very own "----" potion!</h3>
+                    <p>"oh and dont forget to read the fine print.."</p>
+                   <div class="recipe"> <h3 id="recipename"> "----" potion</h3>
+                        <ul>
+                            <li id="list1">(###) handfull/s of (emotion) root </li>
+                            <li id="list2">the juice of a/n (object) </li>
+                            <li id="list3">(###2) drops of (color) slime  </li>
+                            <li id="list4"> a cup of (subject) beans</li>
+                            <li id="list5"> 3 (fruits) (bodypart)  </li>
+                            <p id="mix">Add the ingredients into a bowl and mix for exactly (amount of time).</p>
+                             </ul>
+                         
+                        <p class="fineprint" >*use at your own risk. results may vary. no returns. goodluck. </p>
+                    </div>
+
+                        <button id="newPotion" class="newpotion">New Potion</button>
+                </article>  
+            </section>
+            </main>
+
+            
+    </div>
+        <footer><p>Designed by Brenda Padron</p></footer>
 </body>
 </html>
