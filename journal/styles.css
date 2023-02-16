@@ -54,18 +54,24 @@ header{
 
 figure {
     font-family: 'Josefin Sans', sans-serif;
+    margin-left: 0;
+    
 }
 .bookshelf{
     max-width: 350px;
+    
 }
 .sharedimg{
     max-width: 467px;
+    
 }
 
 .images{
     display: flex;
-    align-items: flex-end;
-    padding-left: 50px;
+    
+    padding-left: 100px;
+    gap: 0px;
+    
 }
 .journal4{
     min-height: 1000px;
