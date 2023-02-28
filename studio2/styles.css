@@ -1,15 +1,16 @@
 body{
     font-family: 'Capriola', sans-serif;
-    padding-top: 65px;
+    padding-top: 55px;
     background-color:  #446349;
     color: #F3E8E0;
+    margin: 0;
    
    
 }
 header h1{
     text-align: center;
     font-family: 'Capriola', sans-serif;
-    font-size:65px;
+    font-size:60px;
 }
 
 .container{
