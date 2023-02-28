@@ -1,0 +1,202 @@
+body{
+    font-family: 'Capriola', sans-serif;
+    margin-top: 50px;
+}
+h1{
+    text-align: center;
+    font-family: 'Capriola', sans-serif;
+    font-size: 40px;
+}
+
+.container{
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+   
+}
+.hidden{
+    display: none;
+}
+
+.display{
+    
+}
+/* starting image */
+.livingroom{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+/* images for each click */
+#cat{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#picture{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#vinyl{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#map{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#boardgame{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* bounding boxes for clickable spaces */
+#container div{
+    position: absolute;
+   
+  
+}
+.one{
+    width: 150px;
+    height: 100px; 
+}
+
+#one{
+    top: 60%;
+    left: 22%;
+    
+}
+
+.two{
+    width: 50px;
+    height: 50px; 
+}
+#two{
+    top: 72%;
+    left: 34%;   
+}
+.three{
+    width: 230px;
+    height: 100px; 
+}
+
+#three{
+    top: 42%;
+    left: 55%;   
+}
+
+.four{
+    width: 230px;
+    height: 175px; 
+}
+#four{
+    top: 39%;
+    left: 83%; 
+}
+.five{
+    width: 250px;
+    height: 175px; 
+}
+#five{
+    top: 70%;
+    left: 78%; 
+}
+
+/* overlays for pictures */
+#overlay{
+    position: absolute;
+    width: 225px;
+    height: 225px; 
+    border-radius: 30%;
+    border: 7px solid #AD7F20;
+    background-color: black;
+  
+    
+}
+
+/* above cat */
+#one #overlay{
+    left: -50px;
+    top: -240px;
+    background-image: url(images/Woody.png);
+}
+/* above photo */
+#two #overlay{
+    left: -39px;
+    top: -230px;
+    background-image: url(images/picture.png);
+}
+/* above vinyl */
+#three #overlay{
+    left: -25px;
+    top: -245px;
+    background-image: url(images/pmore.png);
+}
+/* left of map */
+#four #overlay{
+    left: -240px;
+    top: -75px;
+    background-image: url(images/hike.png);
+}
+/* left of board games */
+#five #overlay{
+    left: -230px;
+    top: -200px;
+    background-image: url(images/games.png);
+}
+
+/* description of pictures */
+#des{
+    position: absolute;
+    line-height: 1.4em;
+}
+
+#one #des{
+    
+    left: 75px;
+    top: 380px;
+    width: 600px;
+}
+#two #des{
+   
+    left: -80px;
+    top: 300px;
+    width: 600px;
+}
+
+#three #des{
+  
+    left: -338px;
+    top: 520px;
+    width: 600px;
+}
+
+#four #des{
+   
+    left: -468px;
+    top: 368px;
+    width: 600px;
+}
+
+#five #des{
+    
+    left: -418px;
+    top: 275px;
+    width: 600px;
+}
+
+footer h2{
+    text-align: center;
+    font-family: 'Capriola', sans-serif;
+}
+
