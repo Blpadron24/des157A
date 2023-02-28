@@ -16,17 +16,17 @@ const three= document.querySelector('#three');
 const four= document.querySelector('#four');
 const five= document.querySelector('#five');
 
-const woody= document.querySelector('#one #overlay');
-const b2= document.querySelector('#two #overlay');
-const paramore= document.querySelector('#three #overlay');
-const pmap= document.querySelector('#four #overlay')
-const bgames= document.querySelector('#five #overlay');
+const woody= document.querySelector('#one #overlay1');
+const b2= document.querySelector('#two #overlay2');
+const paramore= document.querySelector('#three #overlay3');
+const pmap= document.querySelector('#four #overlay4')
+const bgames= document.querySelector('#five #overlay5');
 
-const des1= document.querySelector('#one #des');
-const des2= document.querySelector('#two #des');
-const des3= document.querySelector('#three #des');
-const des4= document.querySelector('#four #des');
-const des5= document.querySelector('#five #des');
+const des1= document.querySelector('#one #des1');
+const des2= document.querySelector('#two #des2');
+const des3= document.querySelector('#three #des3');
+const des4= document.querySelector('#four #des4');
+const des5= document.querySelector('#five #des5');
 
 // fill cat with color/ show woody
 one.addEventListener('mouseover', function(event){

@@ -1,6 +1,10 @@
 body{
     font-family: 'Capriola', sans-serif;
     margin-top: 50px;
+    background-color:  #446349;
+    color: #F3E8E0;
+   
+   
 }
 h1{
     text-align: center;
@@ -15,16 +19,16 @@ h1{
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-
+    
    
 }
 .hidden{
     display: none;
 }
 
-.display{
+/* .display{
     
-}
+} */
 /* starting image */
 .livingroom{
     position: relative;
@@ -63,6 +67,7 @@ h1{
 /* bounding boxes for clickable spaces */
 #container div{
     position: absolute;
+    
    
   
 }
@@ -113,82 +118,83 @@ h1{
 }
 
 /* overlays for pictures */
-#overlay{
+#overlay1, #overlay2, #overlay3, #overlay4, #overlay5 {
     position: absolute;
     width: 225px;
     height: 225px; 
     border-radius: 30%;
     border: 7px solid #AD7F20;
     background-color: black;
+   
   
     
 }
 
 /* above cat */
-#one #overlay{
+#one #overlay1{
     left: -50px;
     top: -240px;
     background-image: url(images/Woody.png);
 }
 /* above photo */
-#two #overlay{
+#two #overlay2{
     left: -39px;
     top: -230px;
     background-image: url(images/picture.png);
 }
 /* above vinyl */
-#three #overlay{
+#three #overlay3{
     left: -25px;
     top: -245px;
     background-image: url(images/pmore.png);
 }
 /* left of map */
-#four #overlay{
+#four #overlay4{
     left: -240px;
     top: -75px;
     background-image: url(images/hike.png);
 }
 /* left of board games */
-#five #overlay{
+#five #overlay5{
     left: -230px;
     top: -200px;
     background-image: url(images/games.png);
 }
 
 /* description of pictures */
-#des{
+#des1, #des2, #des3, #des4, #des5{
     position: absolute;
     line-height: 1.4em;
 }
 
-#one #des{
+#one #des1{
     
     left: 75px;
     top: 380px;
     width: 600px;
 }
-#two #des{
+#two #des2{
    
     left: -80px;
     top: 300px;
     width: 600px;
 }
 
-#three #des{
+#three #des3{
   
     left: -338px;
     top: 520px;
     width: 600px;
 }
 
-#four #des{
+#four #des4{
    
     left: -468px;
     top: 368px;
     width: 600px;
 }
 
-#five #des{
+#five #des5{
     
     left: -418px;
     top: 275px;
