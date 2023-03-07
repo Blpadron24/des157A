@@ -1,0 +1,101 @@
+/* set image and size */
+body{
+    max-width: 85vw;
+    margin: auto;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    font-weight:700;
+    margin: 0;
+    padding-top: 10px;
+    letter-spacing: .1rem;
+    
+    
+}
+
+article{
+    position: relative; 
+}
+
+article section{
+    position: absolute;
+    
+    
+}
+
+.gamecontrol{
+    width:140px;
+    height: 40px;
+    top: 89%;
+    left: 44%;
+    text-align: center;
+}
+
+.game{ 
+    width: 162px;
+    height: 101px; 
+    top: 67.9%; 
+    left: 43%;
+    display: flex;
+}
+.dice1{
+    width: 80px;
+    position: absolute;
+    top: 10%;
+    left: 1.5%;
+    
+}
+.dice2{
+    width: 80px;
+    position: absolute;
+    top: 10%;
+    left: 49%;
+}
+
+.rollp1{
+    width: 72px;
+    height: 72px;
+    top: 72.8%;
+    left: 26.6%;
+    border-radius: 50%;
+}
+.rollp2{
+    width: 72px;
+    height: 72px;
+    top: 72.8%;
+    left: 60.3%;
+    border-radius: 50%;
+}
+.skip1{
+    width: 68px;
+    height: 68px;
+    border-radius: 20%;
+    top: 72.8%;
+    left: 34%;
+
+}
+.skip2{
+    width: 68px;
+    height: 68px;
+    border-radius: 20%;
+    top: 72.8%;
+    left: 67.5%;
+
+}
+.score1{
+    width:154px;
+    height: 41px;
+    top: 89.5%;
+    left: 26.8%;
+}
+.score2{
+    width:154px;
+    height: 41px;
+    top: 89.5%;
+    left: 59.8%;
+}
+.hidden{
+    display: none;
+}
