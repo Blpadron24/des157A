@@ -3,8 +3,9 @@
 
     console.log('Reading JS');
 
-    const startGame = document.getElementById('startgame');
+    const playButton = document.getElementById('play');
     const game= document.getElementById('game');
+    const gameControl= document.getElementById('gamecontrol');
     const score= document.getElementById('score');
     const actionArea= document.getElementById('actions');
     const update = document.getElementById('update');
@@ -16,17 +17,20 @@
         roll1: 0,
         roll2: 0,
         rollSum: 0,
+        turnSum:0,
         index: 0,
         gameEnd: 35
 };
 //start game pick random player to start
-startGame.addEventListener('click', function(){
+playButton.addEventListener('click', function(){
+    console.log('start');
    
-    document.getElementById('play').className= "hidden";
-    document.getElementById('endgame').className= "";
+    // document.getElementById('play').className= "hidden";
+    // document.getElementById('endgame').className= "";
     gameData.index = Math.round(Math.random());
     console.log(gameData.index, "this is the first time a player is picked");
     console.log('starting the game worked');
+    gameControl.innerHTML= '<p id="quit" class="">Quit</p>'
     document.getElementById('quit').addEventListener('click', function () {
         location.reload();
     });
@@ -74,37 +78,27 @@ function throwDice(){
     } 
     function skipTurn(){
         //skip
-        if(gameData.index=== 1){
+        if(gameData.index=== 0){
             
-            document.getElementById('skip2').addEventListener('click', function () {
+            document.getElementById('skip1').addEventListener('click', function () {
               
-            console.log('skip2 is working');
+            console.log('skip1 is working');
 
-            gameData.index ? (gameData.index = 0) : (gameData.index = 1);
+            gameData.index = 1;
             setUpTurn();
-            console.log(gameData.index, 'player 1 skipped, new player should be 0');
+            console.log(gameData.index, 'player 0 skipped, new player should be 1');
         });
         
         } else{
-            document.getElementById('skip1').addEventListener('click', function () {
-            console.log('skip1 is working');
-            gameData.index ? (gameData.index = 0) : (gameData.index = 1);
+            document.getElementById('skip2').addEventListener('click', function () {
+            console.log('skip2 is working');
+            gameData.index = 0;
             setUpTurn();
-            console.log(gameData.index, 'player 0 skipped, new player should be 1');
+            console.log(gameData.index, 'player 1 skipped, new player should be 0');
                    
         });
     }
-// else{  
-//      document.getElementById('rollp2').addEventListener('click',     function(){
-//             throwDice();
-//         });
-//         document.getElementById('skip2').addEventListener('click', function () {
-//             console.log('skip2 is working');
-//             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-//             setUpTurn();
-//         });
-       
-    // }
+
   } 
 
  }
