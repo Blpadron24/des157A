@@ -13,6 +13,8 @@
     const rAgain1=document.getElementById('ragain1');
     const rAgain2=document.getElementById('ragain2');
     const update = document.getElementById('update');
+    var audio = new Audio('audio/clickingsounds.mp3');
+    var audio2= new Audio('audio/winsounds.mp3');
    
     
 
@@ -29,13 +31,16 @@
 };
 //start game pick random player to start
 playButton.addEventListener('click', function(){
+    audio.play();
     console.log('start');
     gameData.index = Math.round(Math.random());
     console.log(gameData.index, "this is the first time a player is picked");
     console.log('starting the game worked');
     gameControl.innerHTML= '<p id="quit" class="">END GAME</p>';
     document.getElementById('quit').addEventListener('click', function () {
+        
         location.reload();
+       
     });
 
     setUpTurn();
@@ -46,6 +51,7 @@ function setUpTurn() {
     game.innerHTML = `<p id="playerUp" class=""> ${gameData.players[gameData.index]} is up, roll the dice</p>`;
     if(gameData.index=== 0){
         document.getElementById('rollp1').addEventListener('click', function(){
+            audio.play();
             console.log('rolling the p1 dice worked');
             game.innerHTML = "";
             console.log('if you see this twice the button is being clicked again and thats messing everything up!!')
@@ -54,7 +60,7 @@ function setUpTurn() {
 		});
     }
     else{
-        document.getElementById('rollp2').addEventListener('click', function(){
+        document.getElementById('rollp2').addEventListener('click', function(){   audio.play();
             console.log('rolling the p2 dice worked');
             game.innerHTML = "";
 			throwDice();
@@ -64,7 +70,7 @@ function setUpTurn() {
     }
     //throw dice
 function throwDice(){
-        
+        checkWinningCondition();
         gameData.roll1= Math.floor(Math.random()*6)+1;
         gameData.roll2= Math.floor(Math.random()*6)+1;
         game.innerHTML += `<img class="dice1" src="${gameData.dice[gameData.roll1-1]}"> 
@@ -75,72 +81,85 @@ function throwDice(){
         rAgain1.innerHTML ='<section id="ragainp1" class="rollp1"></section>';
         rAgain2.innerHTML ='<section id="ragainp2" class="rollp2"></section>';
         showCurrentScore();
+        checkWinningCondition();
+        
         
 // if two 1's are rolled...
-        // if(gameData.rollSum ===2 ||gameData.rollSum ===12 ) {
-        //     game.innerHTML= '<p>Oh Snap! Snake eyes! You now have 0 points :(</p>';
-        //     gameData.score[gameData.index] = 0;
-        //     console.log(gameData.score[gameData.index], "did the score go to 0?");
-        //     if(gameData.index=== 0){
-        //         gameData.index = 1;
-        //         showCurrentScore();
-        //         setTimeout(setUpTurn, 2000);
+        if(gameData.rollSum ===2 ||gameData.rollSum ===12 ) {
+            game.innerHTML= '<p>You rolled two 1s or two 6s! You now have 0 points :(</p>';
+            gameData.score[gameData.index] = 0;
+            console.log(gameData.score[gameData.index], "did the score go to 0?");
+            if(gameData.index=== 0){
+                gameData.index = 1;
+                showCurrentScore();
+                rAgain1.innerHTML ='<section id="rollp1" class="rollp1"></section>';
+                rAgain2.innerHTML ='<section id="rollp2" class="rollp2"></section>';
+                setTimeout(setUpTurn, 2000);
                
-        //     }
-        //     else{
-        //         gameData.index = 0;
-        //         showCurrentScore();
-        //         setTimeout(setUpTurn, 2000);
-        //     }
-        //     // gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-        //     console.log(gameData.index, "current player");
+            }
+            else{
+                gameData.index = 0;
+                showCurrentScore();
+                rAgain1.innerHTML ='<section id="rollp1" class="rollp1"></section>';
+                rAgain2.innerHTML ='<section id="rollp2" class="rollp2"></section>';
+                setTimeout(setUpTurn, 2000);
+            }
+            // gameData.index ? (gameData.index = 0) : (gameData.index = 1);
+            console.log(gameData.index, "current player");
 			
             
 			
         
-        // }
+        }
 
  // if either die is a 1...
-// 		else if(gameData.roll1 === 1 || gameData.roll2 === 1){ 
-//             if(gameData.index=== 0){
-//                 gameData.index = 1;
+		else if(gameData.roll1 === 1 || gameData.roll2 === 1){ 
+            if(gameData.index=== 0){
+                gameData.index = 1;
                 
-//                 game.innerHTML = `<p>Sorry, one of your rolls was a one, switching to  ${
-//                     gameData.players[gameData.index]
-//                 }</p>`;
-//                 showCurrentScore();
-//                 setTimeout(setUpTurn, 2000);
+                game.innerHTML = `<p>Sorry, one of your rolls was a one, switching to  ${
+                    gameData.players[gameData.index]
+                }</p>`;
+                showCurrentScore();
+                rAgain1.innerHTML ='<section id="rollp1" class="rollp1"></section>';
+                rAgain2.innerHTML ='<section id="rollp2" class="rollp2"></section>';
+                setTimeout(setUpTurn, 2000);
                 
-//             }
-//             else{
-//                 gameData.index = 0;
+            }
+            else{
+                gameData.index = 0;
                 
-//                 game.innerHTML = `<p>Sorry, one of your rolls was a one, switching to  ${
-// 				gameData.players[gameData.index]
-// 			}</p>`;
-//             showCurrentScore();
-//             setTimeout(setUpTurn, 2000);
+                game.innerHTML = `<p>Sorry, one of your rolls was a one, switching to  ${
+				gameData.players[gameData.index]
+			}</p>`;
+            showCurrentScore();
+            rAgain1.innerHTML ='<section id="rollp1" class="rollp1"></section>';
+            rAgain2.innerHTML ='<section id="rollp2" class="rollp2"></section>';
+            setTimeout(setUpTurn, 2000);
             
-//             }
-// 			// gameData.index ? (gameData.index = 0) : (gameData.index = 1);
+            }
+			// gameData.index ? (gameData.index = 0) : (gameData.index = 1);
 			
             
 		
-// 		}
+		}
 
         
-//    // if neither die is a 1...
-// 		else { 
+   // if neither die is a 1...
+		else { 
 			gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
 			showCurrentScore();
+            checkWinningCondition();
             skipTurn();
             if(gameData.index=== 0){
                
                 document.getElementById('ragainp1').addEventListener('click', function(){
+                    audio.play();
                     console.log('rolling the p1 dice worked');
                     console.log(gameData.score[gameData.index], 'should be player ones score');
                     game.innerHTML = "";
                     showCurrentScore();
+                    checkWinningCondition();
                     throwDice();
                     
                     
@@ -149,25 +168,29 @@ function throwDice(){
             else{
                
                 document.getElementById('ragainp2').addEventListener('click', function(){
+                    audio.play();
                     console.log('rolling the p2 dice worked');
-                    
+                    console.log(gameData.score[gameData.index], 'should be player 2s score');
                     game.innerHTML = ""; 
                     showCurrentScore();
+                    checkWinningCondition();
                     throwDice();
                    
                     
                 });
             
-			checkWinningCondition();
-		}
-    // }
+                checkWinningCondition();
+		}}
+   
     function checkWinningCondition() {
-		if (gameData.score[gameData.index] > gameData.gameEnd) {
-			play.innerHTML = `<h2>${gameData.players[gameData.index]} 
-			wins with ${gameData.score[gameData.index]} points!</h2>`;
+		if (gameData.score[gameData.index] >= gameData.gameEnd) {
+            console.log('testing win');
+            audio2.play();
+			game.innerHTML = `<p class="bold" >${gameData.players[gameData.index]} 
+			wins with ${gameData.score[gameData.index]} points!</p>`;
 
 			actionArea.innerHTML = '';
-			document.getElementById('quit').innerHTML = 'Start a New Game?';
+			document.getElementById('quit').innerHTML = 'New Game?';
 		} else {
 			// show current score...
 			showCurrentScore();
@@ -195,6 +218,7 @@ function throwDice(){
         
         if(gameData.index=== 0){
             document.getElementById('skip1').addEventListener('click', function () {
+            audio.play();
             console.log('skip1 is working');
             gameData.index = 1;
            
@@ -206,6 +230,7 @@ function throwDice(){
         
         } else{
             document.getElementById('skip2').addEventListener('click', function () {
+            audio.play();
             console.log('skip2 is working');
             gameData.index = 0;
             rAgain1.innerHTML ='<section id="rollp1" class="rollp1"></section>';

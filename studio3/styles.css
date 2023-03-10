@@ -1,7 +1,15 @@
 /* set image and size */
 body{
-    max-width: 85vw;
+    max-width: 1150px;
     margin: auto;
+    background-color: #E9779C;
+    cursor: default;
+}
+
+h1{
+    padding-top: 50px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight:bolder;
 }
 
 p{
@@ -14,6 +22,7 @@ p{
     
     
 }
+
 
 article{
     position: relative; 
