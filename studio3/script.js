@@ -10,6 +10,8 @@
     const score1=document.getElementById('score1');
     const score2=document.getElementById('score2');
     const actionArea= document.getElementById('actions');
+    const rAgain1=document.getElementById('ragain1');
+    const rAgain2=document.getElementById('ragain2');
     const update = document.getElementById('update');
    
     
@@ -45,7 +47,6 @@ function setUpTurn() {
     if(gameData.index=== 0){
         document.getElementById('rollp1').addEventListener('click', function(){
             console.log('rolling the p1 dice worked');
-            document.getElementById('rollp1').id='ragainp1';
             game.innerHTML = "";
             console.log('if you see this twice the button is being clicked again and thats messing everything up!!')
 			throwDice();
@@ -55,7 +56,6 @@ function setUpTurn() {
     else{
         document.getElementById('rollp2').addEventListener('click', function(){
             console.log('rolling the p2 dice worked');
-            document.getElementById('rollp2').id='ragainp2';
             game.innerHTML = "";
 			throwDice();
 
@@ -64,8 +64,7 @@ function setUpTurn() {
     }
     //throw dice
 function throwDice(){
-    // document.getElementById('rollp1').id='ragainp1';
-    // document.getElementById('rollp2').id='ragainp2';
+        
         gameData.roll1= Math.floor(Math.random()*6)+1;
         gameData.roll2= Math.floor(Math.random()*6)+1;
         game.innerHTML += `<img class="dice1" src="${gameData.dice[gameData.roll1-1]}"> 
@@ -73,6 +72,8 @@ function throwDice(){
 		gameData.rollSum = gameData.roll1 + gameData.roll2;
         console.log(gameData.rollSum, 'this is the sum of the roll');
         console.log(gameData.index, 'this is the original player chosen');
+        rAgain1.innerHTML ='<section id="ragainp1" class="rollp1"></section>';
+        rAgain2.innerHTML ='<section id="ragainp2" class="rollp2"></section>';
         showCurrentScore();
         
 // if two 1's are rolled...
@@ -196,7 +197,9 @@ function throwDice(){
             document.getElementById('skip1').addEventListener('click', function () {
             console.log('skip1 is working');
             gameData.index = 1;
-            document.getElementById('ragainp1').id='rollp1';
+           
+            rAgain1.innerHTML ='<section id="rollp1" class="rollp1"></section>';
+            rAgain2.innerHTML ='<section id="rollp2" class="rollp2"></section>';
             setUpTurn();
             console.log(gameData.index, 'player 0 skipped, new player should be 1');
         });
@@ -205,7 +208,8 @@ function throwDice(){
             document.getElementById('skip2').addEventListener('click', function () {
             console.log('skip2 is working');
             gameData.index = 0;
-            document.getElementById('ragainp2').id='rollp2';
+            rAgain1.innerHTML ='<section id="rollp1" class="rollp1"></section>';
+            rAgain2.innerHTML ='<section id="rollp2" class="rollp2"></section>';
             setUpTurn();
             console.log(gameData.index, 'player 1 skipped, new player should be 0');
                    
