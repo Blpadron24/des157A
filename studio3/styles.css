@@ -26,6 +26,7 @@ p{
 
 article{
     position: relative; 
+   
 }
 
 article section{
@@ -40,6 +41,7 @@ article section{
     top: 89%;
     left: 44%;
     text-align: center;
+    
 }
 
 .game{ 
