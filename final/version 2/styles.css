@@ -1,0 +1,133 @@
+/* set image and size */
+body{
+    max-width: 1200px;
+    margin: auto;
+    background-color: #E9779C;
+    cursor: default;
+}
+
+h1{
+    padding-top: 50px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight:bolder;
+}
+
+p{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 19px;
+    font-weight:700;
+    margin: 0;
+    padding-top: 10px;
+    letter-spacing: .1rem;
+    color: rgb(255, 240, 251);
+    
+    
+}
+.buttontext p {
+    color: black;
+}
+
+
+article{
+    position: relative; 
+   
+}
+
+article section{
+    position: absolute;
+
+    
+    
+}
+
+.gamecontrol{
+    width:149px;
+    height: 40px;
+    top: 86%;
+    left: 44.05%;
+    text-align: center;
+    
+}
+
+.game{ 
+    width: 162px;
+    height: 119px; 
+    top: 63.9%; 
+    left: 43.5%;
+    display: flex;
+    text-align: center;
+    
+}
+
+.game p{
+    font-size: 16px;
+    font-weight:lighter;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+    
+}
+.dice1{
+    width: 80px;
+    position: absolute;
+    top: 10%;
+    left: 1.5%;
+    
+}
+.dice2{
+    width: 80px;
+    position: absolute;
+    top: 10%;
+    left: 49%;
+}
+
+.rollp1{
+    width: 72px;
+    height: 72px;
+    top: 69.4%;
+    left: 24.4%;
+    border-radius: 50%;
+}
+.rollp2{
+    width: 72px;
+    height: 72px;
+    top: 69.5%;
+    left: 62.3%;
+    border-radius: 50%;
+}
+.skip1{
+    width: 68px;
+    height: 68px;
+    border-radius: 20%;
+    top: 69.9%;
+    left: 32.6%;
+
+}
+.skip2{
+    width: 68px;
+    height: 68px;
+    border-radius: 20%;
+    top: 69.9%;
+    left: 70.5%;
+
+}
+.score1{
+    width:154px;
+    height: 41px;
+    top: 86.5%;
+    left: 24.5%;
+    padding-left: 20px;
+}
+.score2{
+    width:154px;
+    height: 41px;
+    top: 86.5%;
+    left: 61.46%;
+    padding-left: 20px;
+}
+.hidden{
+    display: none;
+}
+.hidden2{
+    display:none;
+}
