@@ -2,6 +2,7 @@
     "use strict";
 
     console.log('Reading JS');
+    alert("Hey! Welcome to the arcade! You're here to test our new game. Your tasks are to: 1. Locate and read the game instructions 2. Start the game 3. Play the game as both players until one wins. Thank you for playing! ");
 
     const playButton = document.getElementById('play');
     const game= document.getElementById('game');
