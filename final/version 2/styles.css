@@ -12,18 +12,18 @@ h1{
     font-weight:bolder;
 }
 
-/* article #gamecontrol{
+article #gamecontrol{
     background-color: #C92C5E;
     animation: myanimation 2s infinite;
-} */
+} 
 
-/* @keyframes myanimation {
+@keyframes myanimation {
     0% {background-color: #C92C5E}
 
     50%{background-color: #c77991}
    
     100% {background-color: #C92C5E}
-} */
+}
 
 p{
     font-family: 'Space Grotesk', sans-serif;
