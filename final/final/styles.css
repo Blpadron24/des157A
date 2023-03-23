@@ -1,0 +1,302 @@
+/* set image and size */
+body{
+    max-width: 1200px;
+    margin: auto;
+    background-color: #E9779C;
+    cursor: default;
+}
+
+h1{
+    padding-top: 50px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight:bolder;
+}
+
+/* article #gamecontrol{
+    background-color: #C92C5E;
+    animation: myanimation 2s infinite;
+}  */
+
+
+
+p{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 19px;
+    font-weight:700;
+    margin: 0;
+    padding-top: 10px;
+    letter-spacing: .1rem;
+    color: rgb(255, 240, 251);
+    
+    
+}
+.flashplay{
+    width:155.04px;
+    height: 39px;
+    top: 86%;
+    left: 43.79%;
+    text-align: center;
+    background-color: #C92C5E;
+    animation: myanimation 2s infinite;
+    border-radius: 5px;
+
+}
+
+@keyframes myanimation {
+    0% {background-color: #C92C5E}
+
+    50%{background-color: #a3234c}
+   
+    100% {background-color: #C92C5E}
+}
+.flashroll1{
+
+    width: 69px;
+    height: 69px;
+    top: 69.5%;
+    left: 24.37499905%;
+    border-radius: 50%;
+   
+    animation: myanimation2 2s infinite;
+}
+
+@keyframes myanimation2 {
+    0% {background-color: #3cd59d00}
+
+    50%{background-color: #081d163d}
+   
+    100% {background-color: #3cd59d00}
+}
+
+.flashroll2{
+
+    width: 69px;
+    height: 69px;
+    top: 69.5%;
+    left: 24.37499905%;
+    border-radius: 50%;
+   
+    animation: myanimation3 2s infinite;
+}
+
+@keyframes myanimation3 {
+    0% {background-color: #3cd59d00}
+
+    50%{background-color: #081d163d}
+   
+    100% {background-color: #3cd59d00}
+}
+
+.flashskip1{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    top: 70.5%;
+    left: 32.9%;
+    
+    animation: myanimation4 2s infinite;
+    
+}
+
+@keyframes myanimation4 {
+    0% {background-color: #c92c5e00}
+
+    50%{background-color: #2f0a1643}
+   
+    100% {background-color: #c92c5e00}
+}
+
+.flashskip2{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    top: 70.5%;
+    left: 32.9%;
+    
+    animation: myanimation5 2s infinite;
+    
+}
+
+@keyframes myanimation5 {
+    0% {background-color: #c92c5e00}
+
+    50%{background-color: #2f0a1643}
+   
+    100% {background-color: #c92c5e00}
+}
+
+.flashrollagain1{
+  
+    width: 69px;
+    height: 69px;
+    top: 30.5%;
+    left: 24.37499905%;
+    border-radius: 50%;
+   
+    animation: myanimation6 2s infinite;
+}
+
+@keyframes myanimation6 {
+    0% {background-color: #3cd59d00}
+
+    50%{background-color: #103a2b3d}
+   
+    100% {background-color: #3cd59d00}
+}
+
+.buttontext p {
+    color: black;
+}
+
+
+article{
+    position: relative; 
+   
+}
+
+article section{
+    position: absolute;
+
+    
+    
+}
+
+.gamecontrol{
+    width:155.04px;
+    height: 39px;
+    top: 86%;
+    left: 43.79%;
+    text-align: center;
+    
+    border-radius: 5px;
+}
+
+.game{ 
+    width: 162px;
+    height: 119px; 
+    top: 63.9%; 
+    left: 43.5%;
+    display: flex;
+    text-align: center;
+    
+}
+
+.game p{
+    font-size: 16px;
+    font-weight:lighter;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+    
+}
+.dice1{
+    width: 80px;
+    position: absolute;
+    top: 10%;
+    left: 1.5%;
+    
+}
+.dice2{
+    width: 80px;
+    position: absolute;
+    top: 10%;
+    left: 49%;
+}
+
+.rollp1{
+    width: 69px;
+    height: 69px;
+    top: 69.5%;
+    left: 24.37499905%;
+    border-radius: 50%;
+  
+}
+
+.rollagain1{
+    position: absolute;
+    width: 69px;
+    height: 69px;
+    top: 69.5%;
+    left: 24.37499905%;
+    border-radius: 50%;
+  
+}
+.rollp2{
+    width: 72px;
+    height: 72px;
+    top: 69.5%;
+    left: 62.3%;
+    border-radius: 50%;
+}
+.skip1{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    top: 70.5%;
+    left: 32.9%;
+   
+
+}
+.skip2{
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    top: 70.5%;
+    left: 70.8%;
+
+}
+.score1{
+    width:154px;
+    height: 41px;
+    top: 86.5%;
+    left: 24.5%;
+    padding-left: 20px;
+}
+.score2{
+    width:154px;
+    height: 41px;
+    top: 86.5%;
+    left: 61.46%;
+    padding-left: 20px;
+}
+.hidden{
+    display: none;
+}
+.hidden2{
+    display:none;
+}
+/* plush prize overlay */
+.overlay{
+    width: 380px;
+    height: 370px;
+    top: 10.5%;
+    left: 34.5%;
+    background-color: #e9779bef;
+     text-align: center;
+     border-radius: 5px;
+   
+}
+
+.overlay img{
+    position: relative;
+    max-width: 280px;
+    margin: 0;
+    top: 5%;
+    animation: wiggle 2s infinite;
+    
+   
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(0deg); }
+   80% { transform: rotate(0deg); }
+   85% { transform: rotate(5deg); }
+   95% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+.congrats{
+    padding-top: 25px;
+    
+    margin: auto;
+    
+}
